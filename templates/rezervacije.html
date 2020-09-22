@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Rezervacije</title>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+
+	</style>
+  </head>
+
+  <body >
+      
+
+    <form action="/rezervacije/{{korisnik[0]}}" method="POST" name="rezervacijeForm">
+        Napravi rezervaciju
+        <label for="ime">Osoba: </label><input id="ime" type="text" name="ime" placeholder="...">
+        <label for="usluga">Usluga </label><input id="usluga" type="text" name="usluga" placeholder="...">
+        <label for="datum">Datum: </label><input id="kIme" type="date" name="datum" placeholder="...">
+        <label for="vrijeme">Vrijeme: </label><input id="kIme" type="text" name="vrijeme" placeholder="...">
+        <label for="tel">Telefon: </label><input id="kIme" type="number" name="tel" placeholder="...">
+        <input type="submit" value="Spremi rezervaciju"/>
+    </form>
+
+
+
+    <button><a href="{{url_for('pocetna_povratak', kor_id=korisnik[0])}}">Povratak</a></button>
+
+  </body>
+
+ 
+
+
+</html>
+
+
+

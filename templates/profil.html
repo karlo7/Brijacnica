@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Profil: {{korisnik[1]}} {{korisnik[2]}}</title>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+
+	</style>
+  </head>
+
+  <body >
+        <h2>Korisnički profil:</h2>
+
+        <p>{{korisnik[1]}} {{korisnik[2]}}</p>
+
+        <br><br>
+
+        <h2>Osobni podaci:</h2>
+
+        <form action="/uredi_profil/{{korisnik[0]}}" method="POST" name="loginForm">
+            <label for="ime">Ime: </label><input id="ime" type="text" value="{{korisnik[1]}}" name="ime" placeholder="..."/>
+            <label for="prezime">Prezime: </label><input id="prezime" type="text" value="{{korisnik[2]}}" name="prezime" placeholder="..."/>
+            <label for="kIme">Korisničko ime: </label><input id="kIme" type="text" value="{{korisnik[5]}}" name="korisnickoIme" placeholder="..."/>
+            <label for="email">Email: </label><input id="email" type="email" value="{{korisnik[3]}}" name="email" placeholder="..."/>
+            <label for="tel">Telefon: </label><input id="tel" type="number" value="{{korisnik[4]}}" name="tel" placeholder="..."/>
+            <label for="lozinka">Lozinka: </label><input id="lozinka" type="text" value="{{korisnik[6]}}" name="lozinka" placeholder="..."/>
+            <input type="submit" value="Spremi promjene"/>
+        </form>
+
+        <button><a href="{{url_for('pocetna_povratak', kor_id=korisnik[0])}}">Povratak</a></button>
+
+
+  </body>
+
+ 
+
+
+</html>
+
+
+

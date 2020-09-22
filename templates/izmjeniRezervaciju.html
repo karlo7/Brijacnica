@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Rezervacija</title>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+
+	</style>
+  </head>
+
+  <body >
+        <h2>Rezervacija id: {{rezervacija[0]}}</h2>
+
+        <form action="/uredi_rezervaciju/{{rezervacija[0]}}/{{korisnik}}" method="POST" name="rezervacijeForm">
+            Uredi rezervaciju
+            <label for="ime">Osoba: </label><input id="ime" type="text" name="ime" value="{{rezervacija[1]}}" placeholder="...">
+            <label for="usluga">Usluga </label><input id="usluga" type="text" value="{{rezervacija[3]}}" name="usluga" placeholder="...">
+            <label for="datum">Datum: </label><input id="datum" type="date" value="{{rezervacija[5]}}" name="datum" placeholder="...">
+            <label for="vrijeme">Vrijeme: </label><input id="vrijeme" type="text" value="{{rezervacija[4]}}" name="vrijeme" placeholder="...">
+            <label for="tel">Telefon: </label><input id="tel" type="number" value="{{rezervacija[2]}}" name="tel" placeholder="...">
+            <input type="submit" value="Spremi promjene"/>
+        </form>
+
+        <button><a href="{{url_for('obrisi_rezervaciju', rez_id=rezervacija[0], kor_id=korisnik)}}">Obriši trenutnu rezervaciju</a></button>
+        
+        <button><a href="{{url_for('pocetna_povratak', kor_id=korisnik)}}">Povratak</a></button>
+
+
+
+  </body>
+
+ 
+
+
+</html>
+
+
+
